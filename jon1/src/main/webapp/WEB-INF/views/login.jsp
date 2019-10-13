@@ -9,10 +9,8 @@
 <body>
 	<img src="images/login.gif" width="275" height="200">
 	<div id="wrap">
-		<form name="loginInfo" method="post" action="loginpro.jsp"
+		<form name="loginInfo" method="post" action="loginpro.do"
 			onsubmit="return checkValue()">
-
-
 			<br>
 			<br>
 
@@ -26,11 +24,14 @@
 					<td><input type="password" name="password" maxlength="50"></td>
 				</tr>
 			</table>
-			<br> <input type="submit" value="로그인" /> <input type="button"
-				value="회원가입" id="btn" /> <input type="button" value="취소" id="btn1" />
+			<br> 
+			<input type="submit" value="로그인" /> 
+			<input type="button" value="회원가입" id="registerbtn" /> 
+			<input type="button" value="취소" id="mainbtn" />
 		</form>
 	</div>
 </body>
+
 <script>
 <%
 	if(session.getAttribute("login") != null){
@@ -55,14 +56,13 @@ function checkValue()
     }
 }
 
-	document.getElementById("btn").addEventListener("click", function(){
-		location.href = "join.jsp";
+	document.getElementById("registerbtn").addEventListener("click", function(){
+		location.href = "join.do";
 	})
-	document.getElementById("btn1").addEventListener("click", function(){
-		location.href = "index.jsp";
+	document.getElementById("mainbtn").addEventListener("click", function(){
+		location.href = "./";
 	})
 
 </script>
-
 
 </html>

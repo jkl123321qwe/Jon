@@ -19,16 +19,33 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		
-		
 		return "home";
 	}
 	
-	@RequestMapping(value = "login.do", method = RequestMethod.GET)
+	@RequestMapping(value = "information.do", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
+		return "information";
 		
-		
+
+	}
+	
+	@RequestMapping(value = "school.do", method = RequestMethod.GET)
+	public String school(Locale locale, Model model) {
+		return "school";
+	}
+	
+	
+	
+	@RequestMapping(value = "login.do", method = RequestMethod.GET)
+	public String login1(Locale locale, Model model) {
 		return "login";
 	}
+	
+	
+	@RequestMapping(value = "join.do", method = RequestMethod.GET)
+	public String join(Locale locale, Model model) {
+		return "join";
+	}
+	
 	
 }
